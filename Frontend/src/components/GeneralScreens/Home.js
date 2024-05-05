@@ -83,6 +83,7 @@ const Home = () => {
                 )
               }) : <NoStories />
             }
+
           </div>
 
           <Pagination page={page} pages={pages} changePage={setPage} />

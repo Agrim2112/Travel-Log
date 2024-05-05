@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap&family=Hammersmith+One&family=Londrina+Solid:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&family=Inter:wght@500&display=swap');
+
 .storyComments {
     width: 100%;
     position: relative;
@@ -6,7 +11,7 @@
 }
 
 .storyComments h5 {
-    font-family: 'Saira Condensed', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
     padding-left: 0.6rem;
     font-size: 1.2rem;
@@ -57,7 +62,8 @@
 
 .comment-author-username {
     font-size: 0.9rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
 }
 
 .comment-createdAt {

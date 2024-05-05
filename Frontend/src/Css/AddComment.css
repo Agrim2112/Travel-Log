@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap&family=Hammersmith+One&family=Londrina+Solid:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&family=Inter:wght@500&display=swap');
+
 .Inclusive-comment-sidebar {
     position: fixed;
     right: 0;
@@ -54,8 +60,8 @@
 
 .addComment-form .activeuser-info {
     margin-bottom: 20px;
-    font-family: 'Saira Condensed', sans-serif;
-    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
     font-size: 1.1rem;
     position: relative;
     overflow: hidden;
