@@ -6,15 +6,12 @@ import SkeletonStory from "../Skeletons/SkeletonStory";
 import CardStory from "../StoryScreens/CardStory";
 import NoStories from "../StoryScreens/NoStories";
 import Pagination from "./Pagination";
-<<<<<<< HEAD
+
 import Thailand from "../parallaxImage";
 import "../../Css/Home.css"
-=======
-import "../../Css/Home.css";
 import image1 from "../../components/images/img1.jpg";
 import image2 from "../../components/images/img2.jpg";
 import image3 from "../../components/images/img4.jpg";
->>>>>>> main
 
 
 import { useNavigate } from "react-router-dom";
