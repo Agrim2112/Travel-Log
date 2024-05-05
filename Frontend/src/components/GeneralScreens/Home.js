@@ -6,6 +6,7 @@ import SkeletonStory from "../Skeletons/SkeletonStory";
 import CardStory from "../StoryScreens/CardStory";
 import NoStories from "../StoryScreens/NoStories";
 import Pagination from "./Pagination";
+import Thailand from "../parallaxImage";
 import "../../Css/Home.css"
 
 import { useNavigate } from "react-router-dom"
@@ -75,6 +76,10 @@ const Home = () => {
 
         :
         <div>
+          {!search && <div>
+              <Thailand /> 
+            </div>}{
+          }
           <div className="story-card-wrapper">
             {stories.length !== 0 ?
               stories.map((story) => {

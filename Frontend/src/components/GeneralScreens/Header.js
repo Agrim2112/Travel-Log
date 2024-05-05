@@ -5,7 +5,7 @@ import '../../Css/Header.css'
 import { RiPencilFill } from 'react-icons/ri'
 import { FaUserEdit } from 'react-icons/fa'
 import { BiLogOut } from 'react-icons/bi'
-import { BsBookmarks } from 'react-icons/bs'
+// import { BsBookmarks } from 'react-icons/bs'
 import SkeletonElement from '../Skeletons/SkeletonElement';
 import { AuthContext } from '../../Context/AuthContext';
 
@@ -36,12 +36,10 @@ const Header = () => {
         <header>
             <div className="averager">
 
-                <Link to="/" className="logo">
-                    <h5>
-                        MERN BLOG
+                    <h4 className="logo">
+                        TRAVEL TALES
+                    </h4>
 
-                    </h5>
-                </Link>
                 <SearchForm />
                 <div className='header_options'>
 
@@ -53,11 +51,17 @@ const Header = () => {
 
 
                             <Link to="/readList" className='readList-link'>
-                                <BsBookmarks />
+                                {/* <BsBookmarks /> */}
+                                Bookmark
                                 <span id="readListLength">
                                     {activeUser.readListLength}
                                 </span>
                             </Link>
+
+                            <Link to="/" className='home-link'>
+                                <h6>HOME</h6>
+                            </Link>
+                            
                             <div className='header-profile-wrapper '>
 
 
