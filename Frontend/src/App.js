@@ -95,6 +95,7 @@ const LayoutsWithHeader = () => {
             <>
                   <Header />
                   <Outlet />
+                  {/* <About /> */}
                   <Footer />
             </>
       );
