@@ -43,7 +43,7 @@ const getAllStories = asyncErrorWrapper( async (req,res,next) =>{
 
     let query = Story.find();
 
-    query =searchHelper("title",query,req)
+    query =searchHelper(query,req)
 
     const paginationResult =await paginateHelper(Story , query ,req)
 
@@ -152,8 +152,6 @@ const editStory  =asyncErrorWrapper(async(req,res,next)=>{
         story.image = image
     }
     else {
-        // if the image sent
-        // old image locatıon delete
        deleteImageFile(req,previousImage)
 
     }
