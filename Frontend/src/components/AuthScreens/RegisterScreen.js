@@ -57,7 +57,7 @@ const RegisterScreen = () => {
 
         <div className="register-banner-section ">
 
-          <img src="register.png" alt="banner" width="490px" />
+          <img src="registerimage.jpg" alt="banner" width="490px" />
         </div>
 
         <div className="section-wrapper">
@@ -68,11 +68,10 @@ const RegisterScreen = () => {
           </div>
 
           <div className="top-register-explain">
-            <h2>Welcome to MERN Blog </h2>
+            <h2>Welcome! </h2>
 
             <p>
-              It's easy and free to post your thinking on any topic and connect with thounsands of readers.
-
+              Post your blogs and connect with thousands of readers
             </p>
 
 

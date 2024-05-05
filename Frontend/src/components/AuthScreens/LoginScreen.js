@@ -105,7 +105,7 @@ const LoginScreen = () => {
 
         <div className="login-banner-section ">
 
-          <img src="login.png" alt="banner" width="400px" />
+          <img src="loginimage.png" alt="banner" width="400px" />
         </div>
 
       </div>

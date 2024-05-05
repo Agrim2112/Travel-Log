@@ -8,16 +8,16 @@ const Story = ({ story }) => {
         "July", "August", "September", "October", "November", "December"
         ];
         const d = new Date(createdAt);
-        var datestring = d.getDate() + " " +monthNames[d.getMonth()] + " ," + d.getFullYear() 
+        var datestring = d.getDate() + " " +monthNames[d.getMonth()] + "," + d.getFullYear() 
         return datestring
     }
 
     const truncateContent = (content) => {
-        const trimmedString = content.substr(0, 73);
+        const trimmedString = content.substr(0, 140);
         return trimmedString
     }
     const truncateTitle= (title) => {
-        const trimmedString = title.substr(0, 69);
+        const trimmedString = title.substr(0, 22);
         return trimmedString
     }
     
@@ -31,7 +31,7 @@ const Story = ({ story }) => {
 
                     <h5 className="story-title">
                         
-                    {story.title.length > 76 ? truncateTitle(story.title)+"..." : story.title
+                    {story.title.length > 26 ? truncateTitle(story.title)+"..." : story.title
                     
                     }
                     </h5>

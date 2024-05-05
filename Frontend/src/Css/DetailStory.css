@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Secular+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300&family=Roboto:wght@500&family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap&family=Hammersmith+One&family=Londrina+Solid:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Epilogue&family=Inter:wght@500&family=Lato:wght@900&family=Nunito+Sans:ital,opsz,wght@0,6..12,700;1,6..12,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 .Inclusive-detailStory-page {
     width: 1000px;
@@ -26,7 +31,8 @@
     margin-bottom: 1rem;
     letter-spacing: 0.5px;
     padding-left: 18px;
-    font-family: 'Londrina Solid', cursive;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 700;
 }
 
 .story-general-info {
@@ -122,6 +128,8 @@ li.story-readtime {
 }
 
 .story-content h2 {
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
     font-size: 1.7rem;
 }
 
@@ -154,6 +162,10 @@ li.story-readtime {
     padding: 14px 0;
 }
 
+.content{
+    font-family: 'Inter',sans-serif;
+    font-size: 1.1rem;
+}
 .bottom-sec-item ul,
 .fixed-story-options ul {
     padding: 0;

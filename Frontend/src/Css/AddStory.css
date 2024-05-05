@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&family=Inter:wght@500&family=Nunito+Sans:ital,opsz,wght@0,6..12,700;1,6..12,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&family=Inter:wght@500&family=Lato:wght@700&family=Nunito+Sans:ital,opsz,wght@0,6..12,700;1,6..12,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Epilogue&family=Inter:wght@500&family=Lato:wght@900&family=Nunito+Sans:ital,opsz,wght@0,6..12,700;1,6..12,700&display=swap');
+
 .Inclusive-addStory-page {
     width: 1000px;
     margin: 1.2rem auto;
@@ -21,15 +25,15 @@
 
 .addStory-form input#title {
     width: 100%;
-    height: 55px;
+    height: 85px;
     outline: 0;
     border: none;
     border: rgb(235, 235, 235) solid 1px;
-    font-size: 1.4rem;
+    font-size: 2rem;
     padding-left: 1rem;
     font-weight: 450;
-    font-family: 'Balsamiq Sans', cursive;
-    border-bottom: none;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 600;
 }
 
 .ck-editor {
@@ -111,18 +115,20 @@
 
 .addStory-btn {
     width: 100%;
-    background-color: #0063a5;
+    background-color: #006080;
     padding: 0.7rem;
     color: white;
     margin-top: 1.9rem;
     border: none;
     border-radius: 6px;
     font-size: 1.1rem;
+    font-family: 'Lato',sans-serif;
+    font-weight: 700;
 }
 
 .dis-btn {
     width: 100%;
-    background-color: #0063a5;
+    background-color: #006080;
     padding: 0.7rem;
     color: white;
     margin-top: 1.9rem;
