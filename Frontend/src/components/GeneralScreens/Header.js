@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import SearchForm from "./SearchForm";
-import "../../Css/Header.css";
-import { RiPencilFill } from "react-icons/ri";
-import { FaUserEdit } from "react-icons/fa";
-import { BiLogOut } from "react-icons/bi";
-import { BsBookmarks } from "react-icons/bs";
-import SkeletonElement from "../Skeletons/SkeletonElement";
-import { AuthContext } from "../../Context/AuthContext";
+import SearchForm from './SearchForm';
+import '../../Css/Header.css'
+import { RiPencilFill } from 'react-icons/ri'
+import { FaUserEdit } from 'react-icons/fa'
+import { BiLogOut } from 'react-icons/bi'
+// import { BsBookmarks } from 'react-icons/bs'
+import SkeletonElement from '../Skeletons/SkeletonElement';
+import { AuthContext } from '../../Context/AuthContext';
 
 const Header = () => {
   const bool = localStorage.getItem("authToken") ? true : false;
@@ -28,33 +28,48 @@ const Header = () => {
     navigate("/");
   };
 
-  return (
-    <header>
-      <div className="averager">
-        <Link to="/" className="logo">
-          <h5>Travel Tales</h5>
-        </Link>
-        <SearchForm />
-        <div className="header_options">
-          {auth ? (
-            <div className="auth_options">
-              <Link className="addStory-link" to="/addstory">
-                <RiPencilFill /> Add Story{" "}
-              </Link>
+    return (
 
-              <Link to="/readList" className="readList-link">
-                <BsBookmarks />
-                <span id="readListLength">{activeUser.readListLength}</span>
-              </Link>
-              <div className="header-profile-wrapper ">
-                {loading ? (
-                  <SkeletonElement type="minsize-avatar" />
-                ) : (
-                  <img
-                    src={`/userPhotos/${activeUser.photo}`}
-                    alt={activeUser.username}
-                  />
-                )}
+        <header>
+            <div className="averager">
+
+                    <h4 className="logo">
+                        TRAVEL TALES
+                    </h4>
+
+                <SearchForm />
+                <div className='header_options'>
+
+                    {auth ?(
+                        <div className="auth_options">
+
+
+                            <Link className='addStory-link' to="/addstory"><RiPencilFill /> Add Story </Link>
+
+
+                            <Link to="/readList" className='readList-link'>
+                                {/* <BsBookmarks /> */}
+                                Bookmark
+                                <span id="readListLength">
+                                    {activeUser.readListLength}
+                                </span>
+                            </Link>
+
+                            <Link to="/" className='home-link'>
+                                <h6>HOME</h6>
+                            </Link>
+                            
+                            <div className='header-profile-wrapper '>
+
+
+                                {loading ? <SkeletonElement type="minsize-avatar" />
+
+                                    :
+
+                                    <img src={`/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
+
+                                }
+
 
                 <div className="sub-profile-wrap  ">
                   <Link className="profile-link" to="/profile">
