@@ -17,7 +17,7 @@
 .story-card {
     width: 30%;
     position: relative;
-    height: 460px;
+    height: 480px;
     border-radius: 6px;
     margin: 2rem 1rem;
     border: 1px solid rgba(121, 118, 118, 0.3);
@@ -74,13 +74,22 @@
     color: black;
     padding: 10px 3px;
     font-weight: bold;
-    margin-bottom: 1.2rem;
     word-wrap: break-word;
     font-family: 'Epilogue', sans-serif;
 }
 
+.story-card .story-dest
+{
+    font-family:'Inter', sans-serif;
+    font-weight: 550;
+    margin-left: .3rem;
+    margin-bottom: 1.4rem;
+    font-size: 1rem;
+    color: rgb(65, 65, 65);
+}
+
 .story-card .story-text {
-    height: 105px;
+    height: 82px;
     overflow: hidden;
     word-wrap: break-word;
 }

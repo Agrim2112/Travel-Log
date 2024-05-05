@@ -5,7 +5,7 @@ const {searchHelper, paginateHelper} =require("../Helpers/query/queryHelpers")
 
 const addStory = asyncErrorWrapper(async  (req,res,next)=> {
 
-    const {title,content} = req.body 
+    const {title,content,destination} = req.body 
 
     var wordCount = content.trim().split(/\s+/).length ; 
    
@@ -16,6 +16,7 @@ const addStory = asyncErrorWrapper(async  (req,res,next)=> {
         const newStory = await Story.create({
             title,
             content,
+            destination,
             author :req.user._id ,
             image : req.savedStoryImage,
             readtime
@@ -137,13 +138,14 @@ const editStoryPage  =asyncErrorWrapper(async(req,res,next)=>{
 
 const editStory  =asyncErrorWrapper(async(req,res,next)=>{
     const {slug } = req.params ; 
-    const {title ,content ,image ,previousImage } = req.body;
+    const {title ,destination,content ,image ,previousImage } = req.body;
 
     const story = await Story.findOne({slug : slug })
 
     story.title = title ;
     story.content = content ;
-    story.image =   req.savedStoryImage ;
+    story.destination=destination
+    story.image = req.savedStoryImage ;
 
     if( !req.savedStoryImage) {
         // if the image is not sent

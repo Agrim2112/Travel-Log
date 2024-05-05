@@ -13,10 +13,10 @@ const Story = ({ story }) => {
     }
 
     const truncateContent = (content) => {
-        if (content.length <= 140) {
+        if (content.length <= 125) {
             return content;
         }
-        const trimmedString = content.substr(0, 136)+"...";
+        const trimmedString = content.substr(0, 121)+"...";
         return trimmedString;
     }
     const truncateTitle= (title) => {
@@ -39,6 +39,9 @@ const Story = ({ story }) => {
                     }
                     </h5>
 
+                    <p className="story-dest">
+                        {story.destination}
+                    </p>
 
                     <p className="story-text"dangerouslySetInnerHTML={{__html : truncateContent( story.content)}}>
                         </p>

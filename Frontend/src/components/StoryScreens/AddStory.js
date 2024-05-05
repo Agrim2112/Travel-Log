@@ -19,11 +19,13 @@ const AddStory = () => {
     const [content, setContent] = useState('')
     const [success, setSuccess] = useState('')
     const [error, setError] = useState('')
+    const [dest, setDest] = useState('')
 
     const clearInputs = () => {
         setTitle('')
         setContent('')
         setImage('')
+        setDest('')
         editorEl.current.editor.setData('')
         imageEl.current.value = ""
     }
@@ -32,6 +34,7 @@ const AddStory = () => {
         e.preventDefault();
         const formdata = new FormData()
         formdata.append("title", title)
+        formdata.append("destination",dest)
         formdata.append("image", image)
         formdata.append("content", content)
 
@@ -78,6 +81,14 @@ const AddStory = () => {
                     placeholder="Title"
                     onChange={(e) => setTitle(e.target.value)}
                     value={title}
+                />
+                <input className='dest'
+                    type="text"
+                    required
+                    id="dest"
+                    placeholder="Destination"
+                    onChange={(e) => setDest(e.target.value)}
+                    value={dest}
                 />
 
                 <CKEditor
