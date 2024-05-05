@@ -7,7 +7,11 @@ const deleteImageFile =(req ,deleteImage) => {
 
     filePath = path.join( rootDir,`/public/storyImages/${deleteImage}`)
     
-    fs.unlink(filePath, (res) => console.log(res,"file delete "));
+    if (fs.existsSync(filePath)) {
+        fs.unlinkSync(filePath);
+    } else {
+        console.log('File does not exist');
+    }
     
 }
 

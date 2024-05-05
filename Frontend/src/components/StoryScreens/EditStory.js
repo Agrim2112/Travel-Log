@@ -18,6 +18,8 @@ const EditStory = () => {
     const [previousImage, setPreviousImage] = useState('')
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
+    const [destination, setDest] = useState('')
+
     const [success, setSuccess] = useState('')
     const [error, setError] = useState('')
     const navigate = useNavigate()
@@ -28,9 +30,11 @@ const EditStory = () => {
             setLoading(true)
             try {
                 const { data } = await axios.get(`/story/editStory/${slug}`, config)
+                console.log(data.data)
                 setStory(data.data)
                 setTitle(data.data.title)
                 setContent(data.data.content)
+                setDest(data.data.destination)
                 setImage(data.data.image)
                 setPreviousImage(data.data.image)
                 setLoading(false)
@@ -47,6 +51,7 @@ const EditStory = () => {
         const formdata = new FormData()
         formdata.append("title", title)
         formdata.append("content", content)
+        formdata.append("destination",destination)
         formdata.append("image", image)
         formdata.append("previousImage", previousImage)
 
@@ -92,6 +97,15 @@ const EditStory = () => {
                                 placeholder="Title"
                                 onChange={(e) => setTitle(e.target.value)}
                                 value={title}
+                            />
+
+                            <input className='dest'
+                                type="text"
+                                required
+                                id="dest"
+                                placeholder="Destination"
+                                onChange={(e) => setDest(e.target.value)}
+                                value={destination}
                             />
 
                             <CKEditor

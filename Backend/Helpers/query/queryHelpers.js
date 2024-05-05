@@ -1,18 +1,8 @@
-const searchHelper = (searchKey, query, req) => {
-
+const searchHelper = (query, req) => {
     if (req.query.search) {
-
-        const searchObject = {};
-
-        const regex = new RegExp(req.query.search, "i")
-
-        searchObject[searchKey] = regex
-
-        query = query.where(searchObject);
-      
-        return query
+        const regex = new RegExp(req.query.search, "i");
+        query = query.where({ $or: [{ title: regex }, { destination: regex }] });
     }
-
     return query;
 }
 

@@ -8,7 +8,6 @@ import { RiDeleteBin6Line } from 'react-icons/ri'
 import { FiEdit, FiArrowLeft } from 'react-icons/fi'
 import { FaRegComment } from 'react-icons/fa'
 import { BsBookmarkPlus, BsThreeDots, BsBookmarkFill } from 'react-icons/bs'
-import CommentSidebar from '../CommentScreens/CommentSidebar';
 
 const DetailStory = () => {
   const [likeStatus, setLikeStatus] = useState(false)
@@ -168,6 +167,7 @@ const DetailStory = () => {
                   <FiArrowLeft />
                 </Link>
                 <h5>{story.title}</h5>
+                <p>{story.destination}</p>
 
                 <div className='story-general-info'>
 
@@ -194,16 +194,14 @@ const DetailStory = () => {
 
                   {
                     !activeUser.username &&
-                    <div className='comment-info-wrap'>
+                    <div className='like-info-wrap'>
 
-                      <i onClick={(prev) => {
-                        setSidebarShowStatus(!sidebarShowStatus)
-                      }}>
-                        <FaRegComment />
+                      <i>
+                        <FaRegHeart/>
                       </i>
 
 
-                      <b className='commentCount'>{story.commentCount}</b>
+                      <b className='likeCount'>{story.likeCount}</b>
 
                     </div>
                   }
@@ -223,13 +221,13 @@ const DetailStory = () => {
 
               </div>
 
-              <div className="CommentFieldEmp">
+              {/* <div className="CommentFieldEmp">
 
                 <CommentSidebar slug={slug} sidebarShowStatus={sidebarShowStatus} setSidebarShowStatus={setSidebarShowStatus}
                   activeUser={activeUser}
                 />
 
-              </div>
+              </div> */}
 
               <div className='story-content' >
 
@@ -260,18 +258,6 @@ const DetailStory = () => {
                         style={likeStatus ? { color: "#0063a5" } : { color: "rgb(99, 99, 99)" }}
                       >  {likeCount}
                       </b>
-
-                    </li>
-
-
-                    <li>
-                      <i onClick={(prev) => {
-                        setSidebarShowStatus(!sidebarShowStatus)
-                      }}>
-                        <FaRegComment />
-                      </i>
-
-                      <b className='commentCount'>{story.commentCount}</b>
 
                     </li>
 

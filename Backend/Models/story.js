@@ -1,6 +1,6 @@
 
 const mongoose = require("mongoose")
-const Comment = require("./comment")
+
 const slugify = require("slugify")
 
 const StorySchema = new mongoose.Schema({
@@ -16,6 +16,10 @@ const StorySchema = new mongoose.Schema({
         required: [true, "Please provide a title"],
         unique: true,
         minlength: [4, "Please provide a title least 4 characters "],
+    },
+    destination:{
+        type:String,
+        required: [true, "Please provide a title"],
     },
     content: {
         type: String,
@@ -38,14 +42,6 @@ const StorySchema = new mongoose.Schema({
         type: Number,
         default: 0
     },
-    comments: [{
-            type: mongoose.Schema.ObjectId,
-            ref: "Comment"
-    }],
-    commentCount: {
-        type: Number,
-        default: 0
-    }
 
 
 }, { timestamps: true })
@@ -63,15 +59,15 @@ StorySchema.pre("save",  function (next) {
 
 })
 
-StorySchema.pre("remove", async function (next) {
+// StorySchema.pre("remove", async function (next) {
 
-    const story= await Story.findById(this._id)
+//     const story= await Story.findById(this._id)
 
-    await Comment.deleteMany({
-        story : story 
-    })
+//     await Comment.deleteMany({
+//         story : story 
+//     })
 
-})
+// })
 
 StorySchema.methods.makeSlug = function () {
     return slugify(this.title, {
