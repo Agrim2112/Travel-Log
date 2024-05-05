@@ -82,6 +82,7 @@
 
 .ck-editor__editable {
     height: 250px;
+    max-width: 650px;
     padding: 0.5rem 1rem !important;
 }
 

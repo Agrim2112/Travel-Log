@@ -13,10 +13,10 @@ const Story = ({ story }) => {
     }
 
     const truncateContent = (content) => {
-        if (content.length <= 125) {
+        if (content.length <= 123) {
             return content;
         }
-        const trimmedString = content.substr(0, 121)+"...";
+        const trimmedString = content.substr(0, 119)+"...";
         return trimmedString;
     }
     const truncateTitle= (title) => {

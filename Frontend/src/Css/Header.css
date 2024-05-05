@@ -9,6 +9,15 @@ header {
     height: 95px;
     position: relative;
 }
+/* header {
+  background-image: url('C:\Users\abhij\OneDrive\Desktop\nosql\Travel-Log\Frontend\public\Best-Places-to-Stay-in-Thailand-Endless-Travel-Destinations.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* you can adjust this to fit your needs */
+/* } */ 
 
 header .averager {
     max-width: 1000px;

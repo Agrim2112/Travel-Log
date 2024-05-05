@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import SearchForm from './SearchForm';
 import '../../Css/Header.css'
@@ -10,26 +10,23 @@ import SkeletonElement from '../Skeletons/SkeletonElement';
 import { AuthContext } from '../../Context/AuthContext';
 
 const Header = () => {
-    const bool = localStorage.getItem("authToken") ? true : false
-    const [auth, setAuth] = useState(bool)
-    const { activeUser } = useContext(AuthContext)
-    const [loading, setLoading] = useState(true)
-    const navigate = useNavigate()
+  const bool = localStorage.getItem("authToken") ? true : false;
+  const [auth, setAuth] = useState(bool);
+  const { activeUser } = useContext(AuthContext);
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
-    useEffect(() => {
+  useEffect(() => {
+    setAuth(bool);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1600);
+  }, [bool]);
 
-        setAuth(bool)
-        setTimeout(() => {
-            setLoading(false)
-        }, 1600)
-
-    }, [bool])
-
-
-    const handleLogout = () => {
-        localStorage.removeItem("authToken");
-        navigate('/')
-    };
+  const handleLogout = () => {
+    localStorage.removeItem("authToken");
+    navigate("/");
+  };
 
     return (
 
@@ -43,7 +40,7 @@ const Header = () => {
                 <SearchForm />
                 <div className='header_options'>
 
-                    {auth ?
+                    {auth ?(
                         <div className="auth_options">
 
 
@@ -74,34 +71,36 @@ const Header = () => {
                                 }
 
 
-                                <div className="sub-profile-wrap  ">
-                                    <Link className='profile-link' to="/profile"  > <FaUserEdit />  Profile </Link>
+                <div className="sub-profile-wrap  ">
+                  <Link className="profile-link" to="/profile">
+                    {" "}
+                    <FaUserEdit /> Profile{" "}
+                  </Link>
 
-                                    <button className='logout-btn' onClick={handleLogout}> <BiLogOut />  Logout</button>
-
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-                        :
-                        <div className="noAuth_options">
-
-                            <Link className='login-link' to="/login"> Login </Link>
-
-                            <Link className='register-link' to="/register"> Get Started</Link>
-                        </div>
-
-                    }
+                  <button className="logout-btn" onClick={handleLogout}>
+                    {" "}
+                    <BiLogOut /> Logout
+                  </button>
                 </div>
-
+              </div>
             </div>
+          ) : (
+            <div className="noAuth_options">
+              <Link className="login-link" to="/login">
+                {" "}
+                Login{" "}
+              </Link>
 
-        </header>
-
-    )
-}
+              <Link className="register-link" to="/register">
+                {" "}
+                Get Started
+              </Link>
+            </div>
+          )}
+        </div>
+      </div>
+    </header>
+  );
+};
 
 export default Header;
