@@ -1,7 +1,21 @@
+.foot {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
 .footer {
-    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1140px;
     width: 100%;
     border-bottom: rgba(0, 0, 0, 0.2) solid 1px;
+    /* background-color: black; */
+    color: white;
     margin: 0 auto;
     align-items: center;
 }
@@ -15,7 +29,7 @@
 
 .copyright .copyright-blog {
     font-size: 18px;
-    color: rgb(0, 0, 0);
+    color: rgb(256, 256, 256);
     text-align: center;
     margin: 0px;
 }
