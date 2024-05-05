@@ -36,14 +36,15 @@
 }
 
 .top_detail_wrapper p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: bolder;
-    margin-bottom: 1.3rem;
+    margin-bottom: 1rem;
     letter-spacing: 0.5px;
-    padding-left: 20px;
-    font-family: 'Roboto',sans-serif;
+    padding-left: 18px;
+    font-family: 'Inter',sans-serif;
     font-weight: 500;
 }
+
 
 .story-general-info {
     width: 100%;
@@ -159,7 +160,6 @@ li.story-readtime {
 
 .story-content .content {
     width: 92%;
-    margin: 0 auto;
 }
 
 .bottom-sec-item {
@@ -175,6 +175,7 @@ li.story-readtime {
 .content{
     font-family: 'Inter',sans-serif;
     font-size: 1.1rem;
+    padding-left: 2.4rem;
 }
 .bottom-sec-item ul,
 .fixed-story-options ul {
@@ -296,3 +297,9 @@ li.story-readtime {
     color: #0063a5;
     cursor: pointer;
 }
+
+.story-content {
+    overflow: auto; 
+    word-wrap: break-word;
+    box-sizing: border-box;
+  }
