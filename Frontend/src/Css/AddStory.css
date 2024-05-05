@@ -57,6 +57,7 @@
 
 .ck-content {
     border: rgb(235, 235, 235) solid 1px !important;
+    width: 100%;
 }
 
 .ck-toolbar__items,
