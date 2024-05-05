@@ -9,7 +9,7 @@ import Pagination from "./Pagination";
 import "../../Css/Home.css";
 import image1 from "../../components/images/img1.jpg";
 import image2 from "../../components/images/img2.jpg";
-import image3 from "../../components/images/img3.jpg";
+import image3 from "../../components/images/img4.jpg";
 
 
 import { useNavigate } from "react-router-dom";
