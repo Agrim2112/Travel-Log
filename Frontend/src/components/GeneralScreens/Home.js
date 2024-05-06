@@ -6,7 +6,9 @@ import SkeletonStory from "../Skeletons/SkeletonStory";
 import CardStory from "../StoryScreens/CardStory";
 import NoStories from "../StoryScreens/NoStories";
 import Pagination from "./Pagination";
-import "../../Css/Home.css";
+
+import Thailand from "../parallaxImage";
+import "../../Css/Home.css"
 import image1 from "../../components/images/img1.jpg";
 import image2 from "../../components/images/img2.jpg";
 import image3 from "../../components/images/img4.jpg";
@@ -69,6 +71,10 @@ const Home = () => {
         </div>
       ) : (
         <div>
+          {!search && <div>
+              <Thailand /> 
+            </div>}{
+          }
           <div className="story-card-wrapper">
             {stories.length !== 0 ? (
               stories.map((story) => {

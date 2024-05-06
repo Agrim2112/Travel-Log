@@ -61,11 +61,11 @@ header .logo h5 {
 
 .addStory-link {
     color: #0063a5 !important;
-    border: #0063a5 solid 2px;
-    padding: 4px 10px !important;
-    margin-right: 2rem;
-    border-radius: 4px;
-    margin-top: 7px;
+    /* border: #0063a5 solid 2px; */
+    /* padding: 4px 10px !important; */
+    /* margin-right: 2rem; */
+    /* border-radius: 4px;
+    margin-top: 7px; */
 }
 
 .register-link {
@@ -132,6 +132,7 @@ header .logo h5 {
 .header-profile-wrapper {
     height: 50px;
     position: relative;
+    margin-left: 3vw;
 }
 
 .header-profile-wrapper img {
@@ -194,10 +195,12 @@ header .logo h5 {
 
 .readList-link {
     color: black;
-    font-size: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
     margin-right: 1.8rem;
     color: #024d80;
     position: relative;
+    text-decoration: none;
 }
 
 .readList-link:hover {
@@ -209,8 +212,8 @@ header .logo h5 {
     background-color: #0063a5;
     box-shadow: 0 0 4px 1px #0063a5;
     text-decoration: none;
-    top: 3px;
-    right: -12px;
+    top: -1vh;
+    right: -1.25vw;
     font-size: 0.8rem;
     font-weight: bold;
     font-family: 'Inter';
@@ -220,4 +223,14 @@ header .logo h5 {
     width: 24px;
     height: 24px;
     text-align: center;
+}
+
+.home-link{
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #024d80;
+    position: relative;
+    text-decoration: none;
+    padding-top: 2vh;
 }
